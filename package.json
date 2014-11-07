@@ -12,11 +12,11 @@
 
   "repository": {
     "type": "git",
-    "url": "git://github.com/hubot-scripts/hubot-recharge.git"
+    "url": "git://github.com/impleri/hubot-recharge.git"
   },
 
   "bugs": {
-    "url": "https://github.com/hubot-scripts/hubot-recharge/issues"
+    "url": "https://github.com/impleri/hubot-recharge/issues"
   },
 
   "dependencies": {
