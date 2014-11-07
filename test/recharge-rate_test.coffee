@@ -1,8 +1,7 @@
 chai = require "chai"
 sinon = require "sinon"
 chai.use require "sinon-chai"
-
-expect = chai.expect
+should = chai.should()
 
 describe "recharge", ->
   beforeEach ->
@@ -12,6 +11,6 @@ describe "recharge", ->
 
     require("../src/recharge-rate")(@robot)
 
-  it "registers respond listeners", ->
-    expect(@robot.respond).to.have.been.calledWith /recharge\s+max\s+([0-9]{1,2})/i
-    expect(@robot.respond).to.have.been.calledWith /recharge\s+efficiency\s+([0-9]{1,2})\s+([0-9\.]+)\s*([a-z]+)/i
+  it "registers listeners", ->
+    @robot.respond.should.be.calledWith /recharge\s+(max|distance)\s+([0-9]{1,2})/i
+    @robot.respond.should.be.calledWith /recharge\s+(efficiency|rate|percent)\s+([0-9]{1,2})\s+([0-9\.]+)\s*([a-z]+)?/i
